@@ -1,0 +1,608 @@
+/* ================================
+   PRANIKS PREMIUM FASHION WEBSITE
+   ================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    background: #ffffff;
+    color: #111111;
+}
+
+/* ================================
+   HEADER
+   ================================ */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 5%;
+
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid #eeeeee;
+
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 7px;
+    color: #111111;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    color: #111111;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: opacity 0.3s ease;
+}
+
+nav a:hover {
+    opacity: 0.45;
+}
+
+/* ================================
+   HERO
+   ================================ */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.30),
+            rgba(0, 0, 0, 0.30)
+        ),
+        url("shirt1.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    text-align: center;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: clamp(55px, 10vw, 130px);
+    font-weight: 500;
+    letter-spacing: 15px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+.hero-btn {
+    display: inline-block;
+
+    padding: 16px 35px;
+
+    background: #ffffff;
+    color: #111111;
+
+    text-decoration: none;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    transition: 0.3s ease;
+}
+
+.hero-btn:hover {
+    background: #111111;
+    color: #ffffff;
+}
+
+/* ================================
+   ABOUT / INTRO
+   ================================ */
+
+.intro {
+    text-align: center;
+    padding: 120px 8%;
+}
+
+.intro small {
+    display: block;
+
+    color: #777777;
+
+    font-size: 10px;
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 25px;
+}
+
+.intro h2 {
+    font-size: clamp(32px, 5vw, 60px);
+    font-weight: 400;
+
+    letter-spacing: -2px;
+    line-height: 1.1;
+
+    margin-bottom: 30px;
+}
+
+.intro p {
+    max-width: 650px;
+    margin: auto;
+
+    color: #555555;
+
+    font-size: 14px;
+    line-height: 2;
+}
+
+/* ================================
+   COLLECTION
+   ================================ */
+
+.collection {
+    padding: 0 4% 120px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    margin-bottom: 35px;
+}
+
+.section-heading h2 {
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+
+.section-heading span {
+    color: #777777;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+/* ================================
+   GALLERY
+   ================================ */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    background: #f5f5f5;
+    cursor: pointer;
+}
+
+.card img {
+    display: block;
+
+    width: 100%;
+    height: 650px;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.7s ease,
+        filter 0.5s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+    filter: brightness(0.85);
+}
+
+.card-info {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    padding: 60px 25px 25px;
+
+    color: #ffffff;
+
+    background: linear-gradient(
+        transparent,
+        rgba(0, 0, 0, 0.75)
+    );
+}
+
+.card-info h3 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.card-info p {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* ================================
+   STORE SECTION
+   ================================ */
+
+.store {
+    position: relative;
+
+    height: 600px;
+
+    margin: 0 4% 120px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.30),
+            rgba(0, 0, 0, 0.30)
+        ),
+        url("shop3.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.store-content {
+    text-align: center;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.store-content h2 {
+    font-size: clamp(40px, 6vw, 80px);
+    font-weight: 400;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 25px;
+}
+
+.store-content p {
+    font-size: 11px;
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 30px;
+
+    line-height: 1.8;
+}
+
+.store-btn {
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    background: #ffffff;
+    color: #111111;
+
+    text-decoration: none;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    transition: 0.3s ease;
+}
+
+.store-btn:hover {
+    background: #111111;
+    color: #ffffff;
+}
+
+/* ================================
+   FOOTER
+   ================================ */
+
+footer {
+    background: #111111;
+    color: #ffffff;
+
+    padding: 100px 8% 40px;
+
+    text-align: center;
+}
+
+footer h2 {
+    font-size: 50px;
+    font-weight: 400;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 30px;
+}
+
+footer p {
+    color: #aaaaaa;
+
+    font-size: 13px;
+    line-height: 2;
+}
+
+/* ================================
+   CONTACT BUTTONS
+   ================================ */
+
+.contact-buttons {
+    margin: 45px 0;
+}
+
+.contact-btn {
+    display: inline-block;
+
+    margin: 7px;
+
+    padding: 15px 25px;
+
+    border: 1px solid #555555;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+    background: #ffffff;
+    color: #111111;
+    border-color: #ffffff;
+}
+
+/* ================================
+   COPYRIGHT
+   ================================ */
+
+.copyright {
+    margin-top: 80px;
+    padding-top: 25px;
+
+    border-top: 1px solid #333333;
+
+    color: #777777;
+
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+/* ================================
+   FLOATING BUTTONS
+   ================================ */
+
+.floating {
+    position: fixed;
+
+    right: 20px;
+
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    font-size: 20px;
+
+    z-index: 999;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.20);
+
+    transition: 0.3s ease;
+}
+
+.floating:hover {
+    transform: translateY(-5px);
+}
+
+/* WhatsApp */
+
+.whatsapp {
+    bottom: 85px;
+
+    background: #25D366;
+    color: #ffffff;
+}
+
+/* Call */
+
+.call {
+    bottom: 20px;
+
+    background: #111111;
+    color: #ffffff;
+}
+
+/* ================================
+   TABLET
+   ================================ */
+
+@media (max-width: 900px) {
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card img {
+        height: 550px;
+    }
+
+    nav {
+        gap: 20px;
+    }
+}
+
+/* ================================
+   MOBILE
+   ================================ */
+
+@media (max-width: 600px) {
+
+    header {
+        height: 65px;
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 21px;
+        letter-spacing: 5px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 8px;
+        letter-spacing: 0.7px;
+    }
+
+    .hero {
+        height: 85vh;
+        min-height: 550px;
+    }
+
+    .hero-content h1 {
+        font-size: 55px;
+        letter-spacing: 8px;
+    }
+
+    .hero-content p {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .intro {
+        padding: 80px 25px;
+    }
+
+    .intro h2 {
+        font-size: 38px;
+    }
+
+    .intro p {
+        font-size: 13px;
+    }
+
+    .collection {
+        padding: 0 20px 80px;
+    }
+
+    .section-heading {
+        display: block;
+        margin-bottom: 25px;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .section-heading span {
+        display: block;
+        margin-top: 10px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .card img {
+        height: 550px;
+    }
+
+    .store {
+        height: 500px;
+        margin: 0 20px 80px;
+    }
+
+    .store-content h2 {
+        font-size: 48px;
+    }
+
+    .store-content p {
+        font-size: 9px;
+    }
+
+    footer {
+        padding: 80px 25px 30px;
+    }
+
+    footer h2 {
+        font-size: 40px;
+    }
+
+    .floating {
+        width: 48px;
+        height: 48px;
+        right: 15px;
+    }
+}
